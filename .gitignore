@@ -1,0 +1,24 @@
+# Eclipse support files
+/.metadata/
+
+# Local Only Files
+*.log
+asm/
+Logs/
+crash-reports/
+dumps/
+journeymap/
+log/
+resourcepacks/
+saves/
+screenshots/
+options.txt
+usernamecache.json
+
+# Protected Development Files
+ClientModPack/
+Documentation/
+mods/
+modsParking/
+structures/backupStructures/
+
