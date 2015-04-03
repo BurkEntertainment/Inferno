@@ -1,4 +1,8 @@
-A.0.1 - 2015/03/31
+## A.0.2 - 2015/04/01
+* Added new Questbook Recipe
+* Created zero sum reputation system
+
+## A.0.1 - 2015/03/31
 * Added new recipes around Blood with the Forestry machines
 * Fixed harvestability of woods and netherrack
 * Added Nether Ores - restricted to just a small subset of spawning ores

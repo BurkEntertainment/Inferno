@@ -52,7 +52,8 @@ recipes.addShaped(<minecraft:iron_bars>*8,[[steelRod,steelRod,steelRod],[steelRo
 recipes.addShaped(<minecraft:iron_bars>*12,[[rebar,rebar,rebar],[rebar,rebar,rebar],[rebar,rebar,rebar]]);
 
 # Single Bowl
-recipes.addShaped(<minecraft:bowl>,[[anyStick,null,anyStick],[null,anyStick,null]]);
+val bowl = <minecraft:bowl>;
+recipes.addShaped(bowl,[[anyStick,null,anyStick],[null,anyStick,null]]);
 
 
 #-------------------------------#
@@ -132,3 +133,18 @@ recipes.addShaped(gsChisel,[[anyStick,null],[null,flint]]);
 val qBook = <HardcoreQuesting:quest_book>;
 recipes.remove(qBook);
 recipes.addShaped(qBook,[[anyStick,anyNetherrack]]);
+
+
+#------------------------------#
+############ Natura ############
+
+val medley = <Natura:berryMedley>;
+val blightB = <Natura:berry.nether>;
+val duskB = <Natura:berry.nether:1>;
+val skyB = <Natura:berry.nether:2>;
+val stingB = <Natura:berry.nether:3>;
+recipes.addShapeless(medley * 2,[bowl,bowl,blightB,duskB,skyB,stingB]);
+recipes.addShapeless(medley,[bowl,duskB,skyB,stingB]);
+recipes.addShapeless(medley,[bowl,blightB,skyB,stingB]);
+recipes.addShapeless(medley,[bowl,blightB,duskB,stingB]);
+recipes.addShapeless(medley,[bowl,blightB,duskB,skyB]);

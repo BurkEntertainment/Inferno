@@ -1,0 +1,52 @@
+Inferno!
+
+Start in the Nether
+No Nether Fortresses
+Custom Ruins
+Make sure Blood / Honey from Biomes doesn't make stone? If not, use Pyrotheum?
+Make sure you aren't completely boxed in by mobs - two exits that are 64 blocks apart
+Starting crypt connected by lit tunnel
+
+Natura-
+Netherack furnace
+Nether Hopper
+4 types of trees
+Glowshrooms and berries?  Food?
+
+Goals:
+Make It Back To Overworld
+
+
+Questions:
+Can we disable stone / obsidian from other Nether liquids
+
+Current Issues:
+Honey and Blood make Obsidian
+Fusewood / Darkwood / Ghostwood are too rare
+Is Smoldering grass a "dirt" block?
+Not sure how to make starting structure
+Control biome size, make more normal "hell"
+Lava blocks aren't flowing after generation
+Clean way to disable Nether Fortresses
+Balance initial tools / items
+Could we disable normal portals and make some other form of "exit" portal?
+
+ToDo List:
+- Find issue with Biomes O Plenty Hell generation
+- Find issue with Natura plants / trees being over-written by "ground" in Nether
+- Generate Initial starting structure
+- Implement New Harvest Levels for blocks
+- Blend in BoP and Natura Nether crops with Agricraft
+
+[15:24] <Ivorius> Sure
+[15:24] <Ivorius> Well, either you decide for a block and add a block replace transformer, with each possibility as an output
+[15:25] <Ivorius> Or you use a spawn command block with much the same capabilities
+[15:25] <Ivorius> Running /setblock ~ ~ ~ block on each entry
+[15:26] <Ivorius> Oh yeah, if you have the log level set to the highest possible, RC will also log "Spawning static structure at [...]"
+[15:26] <Ivorius> Where you set that depends on the launcher
+[15:26] <Ivorius> But that helps sometimes
+[15:30] <Ivorius> Oh dang, even the startGraveyard thing is pretty huge
+[15:30] <Ivorius> 120 x 120? That's like 64 chunks force-generated x)
+[15:33] <Ivorius> I'm currently also working on partial generation, which would get rid of the problem of huge structures
+[15:34] <Ivorius> But there's a bunch of things left to fix and adress
+[15:38] <Ivorius> Is your structure some kind of arena thing?
