@@ -8,6 +8,9 @@ val anyPlank = <ore:plankWood>;
 val anySlab = <ore:slabWood>;
 val anyStick = <ore:stickWood>;
 val anyCobble = <ore:cobblestone>;
+anyCobble.add(<chisel:cobblestone:*>);
+anyCobble.add(<minecraft:mossy_cobblestone>);
+anyCobble.add(<chisel:mossy_cobblestone:*>);
 val anyGlass = <ore:blockGlass>;
 anyGlass.add(<Railcraft:tile.railcraft.glass:*>);
 anyGlass.add(<Botania:elfGlass>);
@@ -18,9 +21,11 @@ val anyNetherrack = <ore:netherrack>;
 anyNetherrack.add(<chisel:netherrack:*>);
 anyNetherrack.add(<NetherOres:netherOresBlockHellfish>);
 
-
+val netherBrick = <minecraft:netherbrick>;
 val piston = <minecraft:piston>;
 val flint = <minecraft:flint>;
+val bucket = <minecraft:bucket>;
+val obelisk = <Natura:Obelisk>;
 
 # Rod defines
 val ironToughRod = <TConstruct:toughRod:2>;
@@ -31,6 +36,12 @@ val rebar = <Railcraft:part.rebar>;
 val wire = <ore:wire>;
 wire.add(<minecraft:redstone>);
 wire.add(<BuildCraft|Transport:pipeWire:*>);
+
+# Ore Defines
+val aluminum = <ore:ingotAluminum>;
+
+# Gear Defines
+val woodGear = <ore:gearWood>;
 
 
 #-------------------------------#
@@ -54,6 +65,17 @@ recipes.addShaped(<minecraft:iron_bars>*12,[[rebar,rebar,rebar],[rebar,rebar,reb
 # Single Bowl
 val bowl = <minecraft:bowl>;
 recipes.addShaped(bowl,[[anyStick,null,anyStick],[null,anyStick,null]]);
+
+# Aluminum Bucket
+recipes.addShaped(bucket,[[aluminum,null,aluminum],[null,aluminum,null]]);
+
+
+#---------------------------------#
+############ Agricraft ############
+
+val trowel = <AgriCraft:trowel>;
+recipes.remove(trowel);
+recipes.addShaped(trowel,[[null,null,anyStick],[flint,flint,null]]);
 
 
 #-------------------------------#
@@ -104,6 +126,14 @@ recipes.addShaped(cChisel,[[null,flint],[anyStick,null]]);
 #--------------------------------#
 ############ Forestry ############
 
+// Change the Main Casing to be a Wood only solution
+val casing = <Forestry:sturdyMachine>;
+recipes.remove(casing);
+recipes.addShaped(casing,[[anySlab,anySlab,anySlab],[woodGear,woodGear,woodGear],[anyPlank,obelisk,anyPlank]]);
+
+// Add Sticky Propolis as a type of Slimeball for pistons
+<ore:slimeball>.add(<Forestry:propolis:1>);
+
 // Still Blood in to Water
 mods.forestry.Still.addRecipe(100, <liquid:blood> * 20, <liquid:water> * 20);
 
@@ -114,7 +144,7 @@ mods.forestry.Squeezer.addRecipe(1000, [<minecraft:rotten_flesh>], <liquid:blood
 
 mods.forestry.Squeezer.addRecipe(2000, [<Natura:Natura.netherfood>], <liquid:juice> * 200, <Forestry:ash> * 2, 50);
 
-// Allow out Natura sands to work in place of glass
+// Allow our Natura sands to work in place of glass
 mods.forestry.ThermionicFabricator.addSmelting(<Natura:NetherGlass>, 1000, 1000);
 mods.forestry.ThermionicFabricator.addSmelting(<Natura:NetherGlass:1>, 1000, 1000); 
 
